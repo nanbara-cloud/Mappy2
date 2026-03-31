@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEO × AIO | 地域ビジネスの集客を最大化する統合型ソリューション | H2technology</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Meiryo', 'メイリオ', 'MS Gothic', sans-serif; color: #333; background: #fff; line-height: 1.7; }
+
+:root {
+  --pink: #e8327a;
+  --orange: #ff8000;
+  --grad: linear-gradient(135deg, #e8327a 0%, #ff8000 100%);
+  --grad-text: linear-gradient(135deg, #e8327a, #ff8000);
+  --dark: #111;
+  --gray-bg: #f7f7f7;
+  --border: #e0e0e0;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(8px); z-index: 999; border-bottom: 1px solid #eee;
+  display: flex; flex-direction: column;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 40px;
+}
+.nav-links {
+  display: flex; align-items: center; justify-content: center;
+  gap: 2px; padding: 0 20px 10px;
+  flex-wrap: wrap;
+}
+.nav-link {
+  font-size: 0.75rem; font-weight: 600; color: #555;
+  padding: 5px 11px; border-radius: 20px; text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+.nav-link:hover { background: #fff0f6; color: var(--pink); }
+.nav-link.active { background: var(--grad); color: #fff; }
+.nav-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.05em; color: #222; }
+.nav-btn {
+  background: var(--grad); color: #fff; padding: 10px 22px;
+  border-radius: 25px; text-decoration: none; font-size: 0.85rem; font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== HERO ===== */
+#hero {
+  padding: 160px 20px 80px;
+  background: linear-gradient(160deg, #fff 0%, #fff5f8 50%, #fff8f0 100%);
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block; background: var(--grad); color: #fff;
+  font-size: 0.8rem; font-weight: 700; padding: 6px 18px;
+  border-radius: 20px; letter-spacing: 0.08em; margin-bottom: 18px;
+}
+#hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
+#hero h1 span {
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+#hero p.sub { font-size: 1.05rem; color: #555; margin-bottom: 36px; line-height: 2; }
+.btn-primary {
+  display: inline-block; background: var(--grad); color: #fff;
+  padding: 16px 40px; border-radius: 40px; font-size: 1rem; font-weight: 700;
+  text-decoration: none; box-shadow: 0 6px 20px rgba(232,50,122,0.3);
+  transition: transform 0.2s, box-shadow 0.2s; margin: 6px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(232,50,122,0.4); }
+.btn-secondary {
+  display: inline-block; border: 2px solid var(--pink); color: var(--pink);
+  padding: 14px 36px; border-radius: 40px; font-size: 1rem; font-weight: 700;
+  text-decoration: none; margin: 6px;
+}
+.hero-kpis {
+  display: flex; justify-content: center; gap: 40px; margin-top: 56px;
+  flex-wrap: wrap;
+}
+.kpi-card { text-align: center; }
+.kpi-card .num {
+  font-size: 2.8rem; font-weight: 900;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.kpi-card .label { font-size: 0.85rem; color: #666; margin-top: 4px; }
+
+/* ===== SECTION BASE ===== */
+section { padding: 80px 20px; }
+.container { max-width: 960px; margin: 0 auto; }
+.section-label {
+  display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--pink); margin-bottom: 14px;
+}
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; line-height: 1.35; margin-bottom: 14px; }
+h2 .accent { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.section-desc { color: #666; font-size: 0.95rem; margin-bottom: 44px; }
+
+/* ===== PROBLEM ===== */
+#problem { background: var(--gray-bg); }
+.problem-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;
+}
+.problem-card {
+  background: #fff; border-radius: 12px; padding: 22px 20px;
+  border-left: 4px solid var(--pink); box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.problem-card .icon { font-size: 1.4rem; margin-bottom: 8px; }
+.problem-card p { font-size: 0.9rem; line-height: 1.6; }
+.problem-cta {
+  text-align: center; margin-top: 40px; padding: 28px;
+  background: var(--grad); border-radius: 16px; color: #fff;
+}
+.problem-cta p { margin-bottom: 16px; font-size: 1.1rem; font-weight: 700; }
+
+/* ===== MEO ===== */
+.click-table {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px;
+}
+.click-card {
+  border-radius: 12px; padding: 24px 16px; text-align: center;
+  border: 2px solid #eee;
+}
+.click-card.rank1 { border-color: var(--pink); background: #fff0f6; }
+.click-card .rank { font-size: 0.8rem; font-weight: 700; color: #888; margin-bottom: 6px; }
+.click-card .rate {
+  font-size: 2rem; font-weight: 900;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.click-card .desc { font-size: 0.8rem; color: #666; margin-top: 6px; }
+.tip-box {
+  background: #fff8e1; border-left: 4px solid #f59e0b; padding: 16px 20px;
+  border-radius: 8px; font-size: 0.9rem; color: #444;
+}
+
+/* ===== 時代変化 ===== */
+#era-change { background: var(--gray-bg); }
+.era-flow {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center;
+  margin-bottom: 28px;
+}
+.era-box { background: #fff; border-radius: 12px; padding: 24px; border: 2px solid #eee; }
+.era-box.now { border-color: var(--pink); background: #fff0f6; }
+.era-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.era-box ul { list-style: none; font-size: 0.85rem; color: #555; }
+.era-box ul li { padding: 4px 0; }
+.era-arrow { font-size: 2rem; color: var(--pink); text-align: center; }
+.data-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.chip {
+  background: var(--gray-bg); border-radius: 20px; padding: 6px 14px;
+  font-size: 0.8rem; font-weight: 600; color: #444;
+}
+
+/* ===== 検索時代変遷 ===== */
+#search-eras { background: #0d0d1a; color: #fff; }
+#search-eras h2 { color: #fff; }
+.eras-grid {
+  display: flex; flex-direction: row; align-items: center;
+  gap: 0; position: relative; max-width: 900px; margin: 0 auto;
+}
+.era-step {
+  flex: 1;
+  background: rgba(255,255,255,0.06); border-radius: 14px; padding: 20px 14px;
+  text-align: center; border: 1px solid rgba(255,255,255,0.12); position: relative;
+}
+.era-step.current {
+  border: 2px solid var(--pink);
+  background: rgba(232,50,122,0.1);
+}
+.era-step .step-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; color: #aaa;
+  margin-bottom: 8px;
+}
+.era-step.current .step-label { color: var(--pink); }
+.era-step h3 { font-size: 1rem; font-weight: 900; margin-bottom: 10px; color: #fff; }
+.era-step.current h3 { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.era-step .logos { display: flex; justify-content: center; gap: 6px; margin: 10px 0; flex-wrap: wrap; }
+.era-logo-img {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px; overflow: hidden;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: transform 0.2s ease;
+}
+.era-logo-img:hover { transform: scale(1.1); }
+.era-step p { font-size: 0.78rem; color: #ccc; line-height: 1.6; }
+.era-step p span { color: var(--pink); font-weight: 700; }
+.ima-koko {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--grad); color: #fff; font-size: 0.7rem; font-weight: 900;
+  padding: 3px 12px; border-radius: 20px; white-space: nowrap;
+}
+.era-connector {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; color: var(--pink); padding: 0 8px; flex-shrink: 0;
+}
+
+/* ===== 2026予測 ===== */
+#predict-2026 { background: #fff; }
+.predict-visual {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; margin: 32px 0; border-radius: 50px; overflow: hidden;
+  max-width: 600px; margin-left: auto; margin-right: auto;
+}
+.predict-bar {
+  height: 80px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 900; color: #fff; flex: 1;
+}
+.predict-bar.ai { background: var(--pink); }
+.predict-bar.map { background: #0ea5e9; }
+.predict-desc { text-align: center; font-size: 1rem; color: #555; margin-bottom: 24px; }
+.predict-result {
+  text-align: center; font-size: 1.8rem; font-weight: 900; color: #e63946;
+  padding: 20px; background: #fff5f5; border-radius: 12px; border: 2px solid #fca5a5;
+}
+
+/* ===== 調査データ ===== */
+#research { background: var(--gray-bg); }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+.stat-card {
+  background: #fff; border-radius: 16px; padding: 28px 20px; text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.stat-card .number {
+  font-size: 2.6rem; font-weight: 900;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stat-card .desc { font-size: 0.8rem; color: #666; margin: 8px 0; line-height: 1.5; }
+.stat-card .source { font-size: 0.7rem; color: #aaa; }
+.global-stats {
+  background: #1a1a2e; border-radius: 16px; padding: 32px; color: #fff; margin-bottom: 24px;
+}
+.global-stats h3 { color: #fff; font-size: 1.1rem; margin-bottom: 20px; }
+.global-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.global-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.global-pct {
+  font-size: 1.8rem; font-weight: 900; min-width: 80px;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.global-item p { font-size: 0.85rem; color: #ccc; line-height: 1.5; }
+.global-item .src { font-size: 0.7rem; color: #888; margin-top: 4px; }
+.jp-stats { background: #fff0f6; border-radius: 16px; padding: 28px; }
+.jp-stats h3 { color: var(--pink); margin-bottom: 18px; }
+.jp-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #fce7f3; }
+.jp-item:last-child { border-bottom: none; margin-bottom: 0; }
+.jp-pct { font-size: 1.5rem; font-weight: 900; min-width: 70px; color: var(--pink); }
+.jp-item p { font-size: 0.82rem; color: #444; line-height: 1.5; }
+.insight-box {
+  background: #fff; border-radius: 12px; padding: 20px 24px; border-left: 4px solid var(--pink);
+  margin-top: 24px; font-size: 0.9rem; color: #444;
+}
+
+/* ===== インバウンド ===== */
+#inbound { background: #fff; }
+.inbound-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+.inbound-kpi {
+  background: var(--grad); color: #fff; border-radius: 16px; padding: 24px 16px; text-align: center;
+}
+.inbound-kpi .num { font-size: 2rem; font-weight: 900; }
+.inbound-kpi .desc { font-size: 0.8rem; margin-top: 6px; opacity: 0.9; }
+.inbound-kpi .source { font-size: 0.65rem; margin-top: 4px; opacity: 0.8; }
+.rank-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.rank-table th { background: #333; color: #fff; padding: 10px 14px; font-size: 0.85rem; }
+.rank-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+.rank-table tr:nth-child(even) td { background: #f9f9f9; }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.why-card {
+  background: var(--gray-bg); border-radius: 12px; padding: 20px;
+}
+.why-card .num-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; background: var(--grad); color: #fff;
+  border-radius: 50%; font-weight: 900; font-size: 0.9rem; margin-bottom: 10px;
+}
+.why-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { font-size: 0.82rem; color: #555; line-height: 1.6; }
+
+/* ===== AIO重要 ===== */
+#aio-why { background: var(--gray-bg); }
+.aio-3cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.aio-card {
+  background: #fff; border-radius: 16px; padding: 28px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-top: 4px solid var(--pink);
+}
+.aio-card .num { font-size: 2rem; font-weight: 900; color: #e0e0e0; margin-bottom: 10px; }
+.aio-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--dark); }
+.aio-card p { font-size: 0.85rem; color: #555; line-height: 1.7; }
+
+/* ===== AI情報源 POINT01 ===== */
+#ai-sources { background: #fff; }
+.ai-source-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.ai-source-card {
+  border-radius: 16px; padding: 28px 24px;
+  border: 2px solid #eee; background: #fafafa;
+}
+.ai-source-card .ai-logo {
+  display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--pink);
+}
+.ai-source-card p { font-size: 0.88rem; color: #444; line-height: 1.8; }
+.ai-source-card p span { color: var(--pink); font-weight: 700; }
+.point-label {
+  display: inline-block; background: var(--grad); color: #fff;
+  font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 4px;
+  margin-bottom: 14px; letter-spacing: 0.05em;
+}
+
+/* Apple Maps */
+#apple-maps { background: #0d0d1a; color: #fff; }
+#apple-maps h2 { color: #fff; }
+#apple-maps h2 .accent { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.apple-content { font-size: 0.95rem; color: #ccc; line-height: 2; text-align: center; margin-bottom: 28px; }
+.apple-highlight {
+  background: #111; border: 2px solid #4ade80; border-radius: 12px;
+  padding: 22px 28px; text-align: center; margin: 24px auto; max-width: 600px;
+}
+.apple-highlight h3 { color: #4ade80; font-size: 1.3rem; margin-bottom: 10px; }
+.apple-highlight p { color: #ccc; font-size: 0.9rem; line-height: 1.7; }
+.apple-highlight p span { color: var(--pink); font-weight: 700; }
+
+/* Bing */
+#bing-sns { background: var(--gray-bg); }
+.bing-box {
+  background: #fff; border-radius: 16px; padding: 32px; text-align: center;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.07); max-width: 680px; margin: 0 auto;
+}
+.bing-logo { font-size: 2rem; font-weight: 900; color: #0088cc; margin-bottom: 20px; }
+.bing-box p { font-size: 1rem; color: #444; line-height: 1.9; }
+.bing-box p span { color: var(--pink); font-weight: 700; }
+.tailwind-badge {
+  display: inline-block; background: #fff3cd; border: 1px solid #f59e0b;
+  border-radius: 20px; padding: 8px 20px; font-size: 0.85rem; font-weight: 700;
+  color: #92400e; margin-top: 16px;
+}
+
+/* ===== MEO vs AIO ===== */
+#compare { background: #fff; }
+.compare-table { width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.compare-table thead th { background: #222; color: #fff; padding: 14px 20px; font-size: 0.9rem; text-align: center; }
+.compare-table thead th.meo-head { background: #555; }
+.compare-table thead th.aio-head { background: var(--pink); }
+.compare-table tbody td { padding: 12px 20px; border-bottom: 1px solid #eee; font-size: 0.85rem; }
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table tbody td:first-child { color: #666; font-weight: 600; }
+.compare-table tbody td:nth-child(2) { background: #f9f9f9; }
+.compare-table tbody td:nth-child(3) { background: #fff0f6; color: var(--pink); font-weight: 600; }
+
+/* ===== GBP評価 ===== */
+#gbp { background: var(--gray-bg); }
+.gbp-3cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.gbp-col { border-radius: 16px; padding: 24px; }
+.gbp-col.distance { background: #f0f0f0; }
+.gbp-col.relevance { background: #fff0f6; border: 2px solid var(--pink); }
+.gbp-col.authority { background: #fff0f6; border: 2px solid var(--pink); }
+.gbp-col h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+.gbp-col .badge {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 12px; margin-bottom: 12px;
+}
+.badge-no { background: #ddd; color: #666; }
+.badge-yes { background: var(--grad); color: #fff; }
+.gbp-col ul { list-style: none; font-size: 0.82rem; color: #555; }
+.gbp-col ul li { padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.gbp-col ul li:last-child { border-bottom: none; }
+.gbp-col ul li::before { content: "▸ "; color: var(--pink); font-weight: 700; }
+
+/* ===== AIO診断 ===== */
+#aio-check { background: #fff; }
+.check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.check-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--gray-bg); border-radius: 12px; padding: 18px;
+}
+.check-num {
+  min-width: 36px; height: 36px; background: var(--grad); color: #fff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 0.9rem;
+}
+.check-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+.check-item p { font-size: 0.8rem; color: #666; }
+
+/* ===== サービスの違い ===== */
+#service-diff { background: var(--gray-bg); }
+.diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.diff-box { border-radius: 16px; padding: 28px 24px; }
+.diff-box.general { background: #fff; border: 2px solid #ddd; }
+.diff-box.ours { background: #fff0f6; border: 2px solid var(--pink); }
+.diff-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #eee; }
+.diff-box.ours h3 { border-color: var(--pink); color: var(--pink); }
+.diff-box ul { list-style: none; }
+.diff-box ul li { font-size: 0.85rem; padding: 7px 0; color: #555; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.diff-box ul li::before { margin-right: 8px; }
+.diff-box.general ul li::before { content: "✕"; color: #e53e3e; font-weight: 700; }
+.diff-box.ours ul li::before { content: "✓"; color: var(--pink); font-weight: 700; }
+.aio-badge {
+  display: inline-block; background: var(--grad); color: #fff;
+  font-size: 0.75rem; padding: 4px 12px; border-radius: 20px; font-weight: 700; margin-top: 12px;
+}
+
+/* ===== 施策内容 ===== */
+#tactics { background: #fff; }
+.tactics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.tactic-card {
+  background: var(--gray-bg); border-radius: 12px; padding: 20px 16px; text-align: center;
+}
+.tactic-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
+.tactic-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+.tactic-card p { font-size: 0.75rem; color: #666; line-height: 1.5; }
+
+/* ===== AIO改善施策 ===== */
+#aio-tactics { background: var(--gray-bg); }
+.aio-tactics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.aio-tactic {
+  background: #fff; border-radius: 16px; padding: 28px 22px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.aio-tactic .num-big {
+  font-size: 3rem; font-weight: 900; color: #f0e0e8; line-height: 1; margin-bottom: 12px;
+}
+.aio-tactic h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--pink); }
+.aio-tactic ul { list-style: none; font-size: 0.82rem; color: #555; }
+.aio-tactic ul li { padding: 4px 0; border-bottom: 1px solid #f5f5f5; }
+.aio-tactic ul li::before { content: "→ "; color: var(--pink); font-weight: 700; }
+
+/* ===== Mappy × synup ===== */
+#mappy-synup { background: #fff; }
+.synup-intro {
+  background: linear-gradient(135deg, #1a1a2e, #2d1b4e);
+  border-radius: 20px; padding: 36px; color: #fff; margin-bottom: 32px;
+}
+.synup-intro h3 { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 12px; }
+.synup-intro h3 span { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.synup-intro p { font-size: 0.9rem; color: #ccc; line-height: 1.8; margin-bottom: 16px; }
+.synup-intro p strong { color: var(--pink); }
+.synup-effects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.effect-circle {
+  background: var(--grad); border-radius: 50%; width: 150px; height: 150px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: #fff; text-align: center; padding: 16px; margin: 0 auto;
+}
+.effect-circle .e-num { font-size: 2rem; font-weight: 900; opacity: 0.5; line-height: 1; }
+.effect-circle h4 { font-size: 0.78rem; font-weight: 700; line-height: 1.4; }
+.effect-circle p { font-size: 0.65rem; opacity: 0.9; margin-top: 4px; }
+
+/* ===== synup優位性 ===== */
+#synup-merit { background: var(--gray-bg); }
+.merit-3cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.merit-card {
+  background: #fff; border-radius: 16px; padding: 32px 22px; text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.merit-card .m-icon { font-size: 2.5rem; margin-bottom: 16px; }
+.merit-card h3 {
+  font-size: 1rem; font-weight: 700; margin-bottom: 14px;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.merit-card p { font-size: 0.85rem; color: #555; line-height: 1.8; }
+
+/* ===== 対応媒体 ===== */
+#platforms { background: #fff; }
+.platforms-border {
+  border: 2px solid #e0e0e0; border-radius: 16px; padding: 28px;
+  background: linear-gradient(135deg, #ff3b7f08, #ff800008);
+}
+.platform-category { margin-bottom: 24px; }
+.platform-category h4 {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+  color: #888; margin-bottom: 10px; text-transform: uppercase;
+}
+.platform-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.p-badge {
+  padding: 6px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 600;
+  border: 1px solid #e0e0e0; background: #fff; color: #333;
+  transition: all 0.2s;
+}
+.p-badge:hover { background: #fff0f6; border-color: var(--pink); }
+.more-badge {
+  padding: 6px 16px; border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+  background: var(--grad); color: #fff; border: none;
+}
+.platform-count {
+  text-align: center; font-size: 2.5rem; font-weight: 900;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+/* ===== 一元管理 ===== */
+#unified { background: var(--gray-bg); }
+.unified-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.unified-img-box {
+  background: #fff; border-radius: 12px; padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.listing-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+.listing-table th { background: #f5f5f5; padding: 8px 10px; text-align: left; color: #666; font-weight: 600; }
+.listing-table td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; }
+.status-ok { color: #16a34a; font-weight: 700; }
+.status-pending { color: #f59e0b; font-weight: 700; }
+.unified-points { display: flex; flex-direction: column; gap: 18px; }
+.u-point h4 {
+  font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;
+  background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.u-point p { font-size: 0.85rem; color: #555; line-height: 1.7; }
+
+/* ===== 実証実験 ===== */
+#case-study { background: #fff; }
+.case-intro {
+  background: #fff9e6; border: 2px solid #f59e0b; border-radius: 12px;
+  padding: 20px 24px; margin-bottom: 28px; font-size: 0.9rem; color: #444;
+}
+.case-result-title {
+  font-size: 2rem; font-weight: 900; text-align: center;
+  padding: 32px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url() center;
+  background-color: #1a1a2e; color: #fff; border-radius: 12px; margin-bottom: 24px;
+}
+.case-result-title p { font-size: 1.05rem; font-weight: 400; margin-top: 12px; color: #ccc; line-height: 1.9; }
+.case-result-title span { color: #4ade80; font-weight: 700; }
+.case-badge {
+  display: inline-block; background: #e53e3e; color: #fff;
+  font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* ===== 未来展望 ===== */
+#future { background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%); color: #fff; }
+#future h2 { color: #fff; }
+.future-headline {
+  font-size: 1.4rem; font-weight: 700; color: #fff; text-align: center;
+  margin-bottom: 24px; line-height: 1.7;
+}
+.future-items { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+.future-item {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: 24px; text-align: center;
+}
+.future-item h4 { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.future-item p { font-size: 0.85rem; color: #ccc; line-height: 1.7; }
+.future-conclusion {
+  background: #000; border: 1px solid #333; border-radius: 10px;
+  padding: 20px 24px; text-align: center; font-size: 0.95rem; color: #e0e0e0; line-height: 1.9;
+}
+.future-conclusion span { color: #4ade80; font-weight: 700; }
+
+/* ===== AI店舗探し ===== */
+#ai-future { background: var(--gray-bg); }
+.ai-future-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+.ai-future-card {
+  background: #fff; border-radius: 16px; padding: 28px 22px; text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.ai-future-card h4 { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.ai-future-card p { font-size: 0.85rem; color: #555; line-height: 1.7; }
+.exclusive-banner {
+  background: #0d0d1a; border-radius: 16px; padding: 40px; text-align: center; color: #fff;
+}
+.exclusive-banner h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 12px; }
+.exclusive-banner h3 span { color: #4ade80; }
+.exclusive-banner p { font-size: 0.95rem; color: #ccc; line-height: 1.8; }
+
+/* ===== Mappy ===== */
+#mappy { background: #fff; }
+.mappy-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.mappy-feat {
+  background: var(--gray-bg); border-radius: 12px; padding: 20px 16px; text-align: center;
+}
+.mappy-feat .icon { font-size: 1.8rem; margin-bottom: 10px; }
+.mappy-feat h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+.mappy-feat p { font-size: 0.75rem; color: #666; line-height: 1.5; }
+.mappy-note {
+  text-align: center; font-size: 0.8rem; color: #888; margin-top: 16px;
+  background: #f9f9f9; padding: 12px; border-radius: 8px;
+}
+
+/* ===== プラン ===== */
+#plans { background: var(--gray-bg); }
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
+.plan-card {
+  background: #fff; border-radius: 20px; padding: 32px 24px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.08); position: relative;
+}
+.plan-card.featured { border: 3px solid var(--pink); }
+.plan-recommend {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--grad); color: #fff; font-size: 0.75rem; font-weight: 700;
+  padding: 5px 16px; border-radius: 20px; white-space: nowrap;
+}
+.plan-name { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.plan-price { margin-bottom: 4px; }
+.plan-price .yen { font-size: 0.9rem; font-weight: 700; color: var(--pink); }
+.plan-price .num { font-size: 2.4rem; font-weight: 900; color: var(--pink); }
+.plan-price .unit { font-size: 0.82rem; color: #888; }
+.plan-tax { font-size: 0.72rem; color: #bbb; margin-bottom: 4px; }
+.plan-period { font-size: 0.72rem; color: #aaa; margin-bottom: 14px; }
+.plan-features { list-style: none; font-size: 0.78rem; color: #444; }
+.plan-features li {
+  padding: 5px 0; border-bottom: 1px solid #f5f5f5;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: 0.75rem;
+}
+.plan-features li::before { content: "✓ "; color: var(--pink); font-weight: 700; }
+.plan-note { font-size: 0.75rem; color: #e53e3e; margin-top: 10px; }
+
+/* SNS option box — Instagram style */
+.option-box {
+  border-radius: 20px;
+  padding: 32px; color: #fff;
+  display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  background-size: 200% 200%;
+  animation: igGrad 6s ease infinite;
+}
+@keyframes igGrad {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.option-box::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(131,58,180,0.85) 0%, rgba(253,29,29,0.8) 50%, rgba(252,176,69,0.8) 100%);
+  z-index: 0;
+}
+.option-box > * { position: relative; z-index: 1; }
+/* floating circles deco */
+.option-box::after {
+  content: '';
+  position: absolute; width: 300px; height: 300px; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -100px; right: -80px; z-index: 0;
+  animation: igFloat 8s ease-in-out infinite;
+}
+@keyframes igFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(20px) scale(1.08); }
+}
+.option-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+.option-box p { font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+.option-box ul { list-style: none; margin-top: 12px; }
+.option-box ul li { font-size: 0.82rem; color: rgba(255,255,255,0.9); padding: 4px 0; }
+.option-box ul li::before { content: "✓ "; color: #ffe066; font-weight: 700; }
+.ig-logo {
+  font-size: 2rem; margin-bottom: 8px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+.option-price-box { text-align: center; min-width: 160px; }
+.option-price-box .op-num { font-size: 2.2rem; font-weight: 900; color: #fff; }
+.option-price-box .op-unit { font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+
+/* ===== スケジュール ===== */
+#schedule { background: #fff; }
+.schedule-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+.schedule-step { text-align: center; position: relative; }
+.step-circle {
+  width: 60px; height: 60px; background: var(--grad); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.4rem; font-weight: 900; margin: 0 auto 14px;
+}
+.step-label { font-size: 0.75rem; color: #888; margin-bottom: 6px; }
+.step-title { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+.step-items { list-style: none; font-size: 0.78rem; color: #666; text-align: left; }
+.step-items li { padding: 3px 0; }
+.step-items li::before { content: "▸ "; color: var(--pink); }
+.schedule-note {
+  text-align: center; font-size: 0.9rem; color: #555; margin-top: 32px;
+  background: var(--gray-bg); padding: 16px 24px; border-radius: 10px;
+}
+
+/* ===== CTA ===== */
+#cta { background: var(--grad); color: #fff; text-align: center; padding: 100px 20px; }
+#cta h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: #fff; font-weight: 900; margin-bottom: 16px; }
+#cta p { font-size: 1rem; opacity: 0.9; margin-bottom: 36px; line-height: 2; }
+.btn-white {
+  display: inline-block; background: #fff; color: var(--pink);
+  padding: 16px 44px; border-radius: 40px; font-size: 1rem; font-weight: 700;
+  text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2); margin: 6px;
+}
+.cta-note { font-size: 0.8rem; opacity: 0.8; margin-top: 20px; }
+
+/* ===== Footer ===== */
+footer {
+  background: #111; color: #888; text-align: center;
+  padding: 24px 20px; font-size: 0.8rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav { padding: 12px 20px; }
+  .stats-grid, .inbound-kpis, .aio-3cards, .gbp-3cols,
+  .diff-grid, .tactics-grid, .aio-tactics-grid, .merit-3cols,
+  .plans-grid, .schedule-steps, .click-table, .era-flow,
+  .ai-source-cards, .why-grid, .check-grid, .unified-grid,
+  .future-items, .ai-future-grid, .synup-effects { grid-template-columns: 1fr; }
+  .eras-grid { flex-direction: column; }
+  .era-connector { transform: rotate(90deg); padding: 4px 0; }
+  .mappy-features { grid-template-columns: repeat(2, 1fr); }
+  .option-box { grid-template-columns: 1fr; }
+  .global-item, .jp-item { flex-direction: column; gap: 4px; }
+  .effect-circle { width: 120px; height: 120px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-top">
+    <span class="nav-logo">H2technology</span>
+    <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="nav-btn">無料相談はこちら →</a>
+  </div>
+  <div class="nav-links">
+    <a href="#problem"     class="nav-link">課題</a>
+    <a href="#meo"         class="nav-link">MEOとは</a>
+    <a href="#search-eras" class="nav-link">時代の変化</a>
+    <a href="#research"    class="nav-link">調査データ</a>
+    <a href="#inbound"     class="nav-link">インバウンド</a>
+    <a href="#aio-why"     class="nav-link">AIOとは</a>
+    <a href="#ai-sources"  class="nav-link">AI情報源</a>
+    <a href="#compare"     class="nav-link">MEO vs AIO</a>
+    <a href="#platforms"   class="nav-link">対応媒体</a>
+    <a href="#mappy-synup" class="nav-link">synup</a>
+    <a href="#mappy"       class="nav-link">Mappy</a>
+    <a href="#plans"       class="nav-link">プラン</a>
+    <a href="#schedule"    class="nav-link">スケジュール</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container" style="text-align:center;">
+    <span class="hero-badge">Google MAP 対策 × AI最適化</span>
+    <h1>MEO × AIO<br><span>地域ビジネスの集客を、最大化する。</span></h1>
+    <p class="sub">検索順位対策からAI最適化まで。<br>Googleマップで選ばれ、AIに推薦される店舗へ。<br>H2technologyの統合型ソリューションです。</p>
+    <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="btn-primary">無料相談を予約する</a>
+    <div class="hero-kpis">
+      <div class="kpi-card"><div class="num">35〜40%</div><div class="label">MEO1位のクリック率</div></div>
+      <div class="kpi-card"><div class="num">90%</div><div class="label">作業工数削減実績</div></div>
+      <div class="kpi-card"><div class="num">3ヶ月</div><div class="label">基盤構築期間</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <span class="section-label">Problem</span>
+    <h2>こんなお悩みは<span class="accent">ありませんか？</span></h2>
+    <p class="section-desc">多くの地域ビジネスが直面している、集客の構造的な課題です。</p>
+    <div class="problem-grid">
+      <div class="problem-card"><div class="icon">📣</div><p>チラシ・DMなどの集客効果が落ちてきたが、代わりが見つからない</p></div>
+      <div class="problem-card"><div class="icon">🌐</div><p>ホームページからの問い合わせが来ない</p></div>
+      <div class="problem-card"><div class="icon">📉</div><p>広告媒体以外に頼れる集客がなく、売上の増加が見込めない</p></div>
+      <div class="problem-card"><div class="icon">📱</div><p>SNSに費用をかけているが、効果がいまいちわからない</p></div>
+      <div class="problem-card"><div class="icon">💰</div><p>効果を体感する前に、コストをかけるのは不安</p></div>
+      <div class="problem-card"><div class="icon">🤖</div><p>AIで検索するユーザーに自社が紹介されているかわからない</p></div>
+    </div>
+    <div class="problem-cta">
+      <p>これらのお悩み、当社の <strong>MEO × AIO</strong> サービスで解決できます！</p>
+      <p style="font-size:0.9rem;opacity:0.9;margin-bottom:16px;">Googleマップ対策 × AI最適化の統合アプローチで集客を根本から改善します</p>
+      <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="btn-white">無料相談する →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MEOとは -->
+<section id="meo">
+  <div class="container">
+    <span class="section-label">MEOとは？</span>
+    <h2>Googleマップで<span class="accent">上位表示させる対策</span></h2>
+    <p class="section-desc">Map Engine Optimization（マップ検索エンジン最適化）。店舗ビジネスの成果に「最もコミットする」マーケティング手法です。</p>
+    <div class="click-table">
+      <div class="click-card rank1">
+        <div class="rank">1位</div>
+        <div class="rate">35〜40%</div>
+        <div class="desc">クリック率<br>ローカルパック上位表示</div>
+      </div>
+      <div class="click-card">
+        <div class="rank">2位</div>
+        <div class="rate">20〜25%</div>
+        <div class="desc">クリック率<br>地域顧客の獲得</div>
+      </div>
+      <div class="click-card">
+        <div class="rank">3位</div>
+        <div class="rate">10〜15%</div>
+        <div class="desc">クリック率<br>観光客・地元顧客への直接アプローチ</div>
+      </div>
+    </div>
+    <div class="tip-box">💡 通常検索1位のクリック率は8〜19%。MEO上位化の方が圧倒的に有利で、費用対効果が高い集客手法です。</div>
+  </div>
+</section>
+
+<!-- 上位表示だけではもう時代遅れ？ -->
+<section id="obsolete-ranking" style="background:#0d0d1a;color:#fff;padding:80px 20px;">
+  <div class="container">
+    <span class="section-label" style="color:#ff69b4;background:none;-webkit-text-fill-color:#ff69b4;">時代の転換点</span>
+    <h2 style="color:#fff;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:900;margin-bottom:20px;">
+      上位表示だけでは、<br><span style="background:linear-gradient(135deg,#e8327a,#ff8000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">もう時代遅れ？</span>
+    </h2>
+    <p style="color:#aaa;font-size:0.95rem;line-height:1.9;margin-bottom:36px;max-width:680px;">
+      Googleマップで1位を取っても、AIが「おすすめ」に選んでくれなければ、ユーザーの目には届きません。<br>
+      検索行動が根本から変わった今、対策の定義そのものを見直す必要があります。
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px;">
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px 20px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">😰</div>
+        <h4 style="font-size:0.95rem;font-weight:700;color:#e53e3e;margin-bottom:10px;">順位は高いのに来店が増えない</h4>
+        <p style="font-size:0.82rem;color:#aaa;line-height:1.7;">Googleマップ1位でも、AIの回答に載らなければ新しい顧客層にリーチできない時代になっています。</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px 20px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">🤖</div>
+        <h4 style="font-size:0.95rem;font-weight:700;color:var(--pink);margin-bottom:10px;">AIが「選ぶ基準」は順位ではない</h4>
+        <p style="font-size:0.82rem;color:#aaa;line-height:1.7;">AIは「信頼できる情報源かどうか」で推薦先を決めます。情報の質・一貫性・網羅性が問われます。</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px 20px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:12px;">⏱️</div>
+        <h4 style="font-size:0.95rem;font-weight:700;color:#f59e0b;margin-bottom:10px;">対策の遅れは、差の拡大に直結</h4>
+        <p style="font-size:0.82rem;color:#aaa;line-height:1.7;">AIの学習には時間がかかります。今動いた店舗が半年後・1年後に圧倒的に有利な立場を手にします。</p>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(232,50,122,0.15),rgba(255,128,0,0.15));border:2px solid rgba(232,50,122,0.4);border-radius:16px;padding:24px 32px;text-align:center;">
+      <p style="font-size:1.1rem;font-weight:700;color:#fff;line-height:1.8;">
+        今必要なのは「上位表示」ではなく、<span style="color:var(--pink);">「AIに選ばれる情報基盤」</span>を作ること。<br>
+        <span style="font-size:0.9rem;color:#ccc;font-weight:400;">MEO × AIOの統合アプローチが、これからの集客の新しいスタンダードです。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 時代の変化 -->
+<section id="era-change">
+  <div class="container">
+    <span class="section-label">時代の変化</span>
+    <h2>「調べる」から<span class="accent">「AIに聞く」</span>へ</h2>
+    <p class="section-desc">検索行動が大きく変化しています。過去の直線的なカスタマージャーニーは崩れ、AIが店舗を直接推薦する時代が到来しました。</p>
+    <div class="era-flow">
+      <div class="era-box">
+        <h4>📋 過去の動き</h4>
+        <ul>
+          <li>① 認知</li><li>② 興味・関心</li><li>③ 比較・検討</li><li>④ 来店・購入</li>
+        </ul>
+        <p style="font-size:0.8rem;color:#888;margin-top:8px;">直線的な行動フロー</p>
+      </div>
+      <div class="era-arrow">→</div>
+      <div class="era-box now">
+        <h4>🚀 現在の動き</h4>
+        <p style="font-size:0.85rem;color:#555;margin-bottom:12px;">認知〜比較が流動化。Google検索・マップ・SNS・AIが複雑に絡み合い、行動が非線形に変化</p>
+        <div class="data-chips">
+          <span class="chip">Googleスマホシェア 78.8%</span>
+          <span class="chip">70代スマホ使用率 9割超</span>
+          <span class="chip">AIで店を探すユーザーが急増</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 検索時代変遷（NEW） -->
+<section id="search-eras">
+  <div class="container">
+    <span class="section-label" style="color:#ff69b4;">検索行動の進化</span>
+    <h2 style="color:#fff;">検索の<span class="accent">3つの時代</span>を理解する</h2>
+    <p class="section-desc" style="color:#aaa;">集客を制するためには、「いまどの時代か」を正確に把握することが出発点です。</p>
+    <div class="eras-grid">
+      <div class="era-step">
+        <div class="step-label">STAGE 01</div>
+        <h3>Google検索時代</h3>
+        <div class="logos">
+          <!-- 食べログ -->
+          <div class="era-logo-img" title="食べログ">
+            <svg width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="52" height="28" rx="6" fill="#E4341A"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" font-family="sans-serif">食べログ</text>
+            </svg>
+          </div>
+          <!-- ホットペッパー -->
+          <div class="era-logo-img" title="ホットペッパー">
+            <svg width="64" height="28" viewBox="0 0 64 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="64" height="28" rx="6" fill="#FF0000"/>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="sans-serif">ホットペッパー</text>
+            </svg>
+          </div>
+        </div>
+        <p>食べログ、ホットペッパーなどの<span style="color:var(--pink);font-weight:700;">ポータルサイト</span>が主流。</p>
+      </div>
+      <div class="era-connector">→</div>
+      <div class="era-step">
+        <div class="step-label">STAGE 02</div>
+        <h3>SNS・マップ検索時代</h3>
+        <div class="logos">
+          <!-- Google Maps -->
+          <div class="era-logo-img" title="Googleマップ">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="13" r="11" fill="#fff"/>
+              <!-- G -->
+              <path d="M16 4C10.477 4 6 8.477 6 14s4.477 10 10 10 10-4.477 10-10S21.523 4 16 4z" fill="#34A853"/>
+              <path d="M16 4C10.477 4 6 8.477 6 14c0 4.418 2.865 8.166 6.857 9.478L16 14V4z" fill="#4285F4"/>
+              <path d="M16 4v10l6.857 9.478C26.135 22.166 26 18.418 26 14c0-5.523-4.477-10-10-10z" fill="#FBBC05"/>
+              <path d="M6 14c0 3.314 1.343 6.314 3.515 8.485L16 14H6z" fill="#EA4335"/>
+              <!-- pin -->
+              <ellipse cx="16" cy="24" rx="3" ry="2" fill="#34A853" opacity="0.5"/>
+              <path d="M16 10a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4z" fill="#fff"/>
+            </svg>
+          </div>
+          <!-- Instagram -->
+          <div class="era-logo-img" title="Instagram">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="ig1" cx="30%" cy="107%" r="150%">
+                  <stop offset="0%" stop-color="#fdf497"/>
+                  <stop offset="5%" stop-color="#fdf497"/>
+                  <stop offset="45%" stop-color="#fd5949"/>
+                  <stop offset="60%" stop-color="#d6249f"/>
+                  <stop offset="90%" stop-color="#285AEB"/>
+                </radialGradient>
+              </defs>
+              <rect width="32" height="32" rx="8" fill="url(#ig1)"/>
+              <rect x="8" y="8" width="16" height="16" rx="4.5" stroke="#fff" stroke-width="2" fill="none"/>
+              <circle cx="16" cy="16" r="4" stroke="#fff" stroke-width="2" fill="none"/>
+              <circle cx="22" cy="10" r="1.2" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <p>Instagramや Googleマップなど、<span style="color:var(--pink);font-weight:700;">ビジュアルと位置情報</span>が重視されるように。</p>
+      </div>
+      <div class="era-connector">→</div>
+      <div class="era-step current">
+        <span class="ima-koko">いまここ</span>
+        <div class="step-label">STAGE 03</div>
+        <h3>AI検索時代</h3>
+        <div class="logos">
+          <!-- ChatGPT -->
+          <div class="era-logo-img" title="ChatGPT">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#10a37f"/>
+              <path d="M23.5 13.2a5.3 5.3 0 00-.36-1.97 5.5 5.5 0 00-5.24-3.68 5.48 5.48 0 00-3.9 1.63 3.8 3.8 0 00-2.52.52 3.85 3.85 0 00-1.7 2.24 3.87 3.87 0 00.33 3.84 3.86 3.86 0 00-.52 1.95 3.9 3.9 0 002.34 3.56 5.5 5.5 0 005.61 3.97 3.81 3.81 0 002.52-.52 3.84 3.84 0 001.7-2.24 3.88 3.88 0 00-.33-3.85 3.87 3.87 0 00.07-5.45zm-7.5 10.5a4.07 4.07 0 01-2.6-.94l.13-.07 4.32-2.5a.7.7 0 00.35-.61v-6.1l1.83 1.06a.06.06 0 01.03.05v5.05a4.1 4.1 0 01-4.06 4.06zm-8.75-3.75a4.08 4.08 0 01-.49-2.74l.13.08 4.32 2.5a.71.71 0 00.7 0l5.28-3.05v2.11a.07.07 0 01-.03.06l-4.37 2.52a4.1 4.1 0 01-5.54-1.48zm-1.13-9.5a4.08 4.08 0 012.13-1.8v5.15a.7.7 0 00.35.61l5.27 3.04-1.83 1.06a.07.07 0 01-.07 0l-4.36-2.52a4.1 4.1 0 01-1.49-5.54zm15.05 3.52l-5.28-3.05 1.83-1.05a.07.07 0 01.07 0l4.36 2.52a4.09 4.09 0 01-.63 7.38V14a.7.7 0 00-.35-.61zm1.82-2.76l-.13-.08-4.31-2.51a.71.71 0 00-.71 0L13.56 12v-2.11a.07.07 0 01.03-.06l4.36-2.52a4.1 4.1 0 016.04 4.25v.65zm-11.44 3.76l-1.83-1.06a.06.06 0 01-.03-.05V8.82a4.1 4.1 0 016.72-3.14l-.13.07-4.32 2.5a.7.7 0 00-.35.61l-.06 6.11zm1-2.15l2.35-1.36 2.35 1.36v2.7l-2.35 1.36-2.35-1.36v-2.7z" fill="#fff"/>
+            </svg>
+          </div>
+          <!-- Gemini -->
+          <div class="era-logo-img" title="Gemini">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#1a73e8"/>
+              <path d="M16 6c0 5.52-4.48 10-10 10 5.52 0 10 4.48 10 10 0-5.52 4.48-10 10-10-5.52 0-10-4.48-10-10z" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+        <p>AIがユーザーの意図を解釈し、<span style="color:var(--pink);font-weight:700;">最適な情報を提案</span>する時代へと進化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2026年予測（NEW） -->
+<section id="predict-2026">
+  <div class="container">
+    <span class="section-label">2026年の検索結果予測</span>
+    <h2>検索結果の構造が<span class="accent">大きく変わる</span></h2>
+    <p class="section-desc">2026年中に、検索結果の構成が根本的に変化すると予測されています。</p>
+    <div class="predict-visual">
+      <div class="predict-bar ai">AI Overview 50%</div>
+      <div class="predict-bar map">Googleマップ 50%</div>
+    </div>
+    <p class="predict-desc">AI Overviewで50%、Googleマップで50%で検索結果が構成される可能性が極めて高い。</p>
+    <div class="predict-result">外部サイトの表示が圧倒的に減る！<br><span style="font-size:1rem;font-weight:400;color:#888;">（食べログやホットペッパー等）</span></div>
+    <div class="tip-box" style="margin-top:20px;">
+      💡 今まで食べログやホットペッパーに頼っていた集客手法が通用しなくなる前に、MEO × AIOの対策が急務です。
+    </div>
+  </div>
+</section>
+
+<!-- 調査データ -->
+<section id="research">
+  <div class="container">
+    <span class="section-label">調査データで見る実態</span>
+    <h2>「AIに聞いて決める」消費者は<span class="accent">どのくらいいるのか？</span></h2>
+    <p class="section-desc">国内外の信頼性の高い調査から、AIが購買・意思決定に与える影響のリアルな数字をまとめました。</p>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="number">61%</div><div class="desc">生成AIを購買に活用した経験あり</div><div class="source">Capital One Shopping（2025）</div></div>
+      <div class="stat-card"><div class="number">31%</div><div class="desc">店・商品の検索にAIを好むと回答（従来の検索エンジン派は21%）</div><div class="source">adMarketplace（2025年）</div></div>
+      <div class="stat-card"><div class="number">30.3%</div><div class="desc">日本国内の生成AI利用経験率（2023年3月は3.4%→2年で約9倍）</div><div class="source">日本リサーチセンター（2025年）</div></div>
+    </div>
+    <div class="global-stats">
+      <h3>🌏 グローバルデータ</h3>
+      <div class="global-item"><div class="global-pct">77%</div><div><p>AIを使う消費者の77%が「意思決定が速くなった」と回答</p><p class="src">Capital One Shopping（2025）</p></div></div>
+      <div class="global-item"><div class="global-pct">52%</div><div><p>2025年中に生成AIでショッピングをする予定の消費者</p><p class="src">Adobe 5,000人調査（2025）</p></div></div>
+      <div class="global-item"><div class="global-pct">44%</div><div><p>「AIに代わりに店・商品を探してもらってよい」と答えた米国消費者（18〜34歳では59%）</p><p class="src">Worldpay 8,000人調査（2025年）</p></div></div>
+      <div class="global-item"><div class="global-pct">4,700%↑</div><div><p>小売サイトへのAIチャット経由トラフィックの前年比増加率（2025年7月時点）</p><p class="src">Adobe（1兆件超のサイト訪問データ分析・2025）</p></div></div>
+    </div>
+    <div class="jp-stats" style="margin-top:20px;">
+      <h3>🇯🇵 日本のデータ</h3>
+      <div class="jp-item"><div class="jp-pct">30.3%</div><div><p>生成AIの利用経験率（2025年6月）。2024年6月は15.6%→1年でほぼ2倍</p></div></div>
+      <div class="jp-item"><div class="jp-pct">55.5%</div><div><p>生成AI利用者の用途1位「情報収集・調べもの・検索要約」</p></div></div>
+      <div class="jp-item"><div class="jp-pct">42.7%</div><div><p>「ECサイト・予約サービスでAIに任せてよい範囲がある」と回答した消費者</p></div></div>
+    </div>
+    <div class="insight-box">
+      💡 <strong>このデータが意味すること：</strong>「AIに聞いて店を決める」行動は、すでに実証段階を超えています。今、AIに推薦されない店は、そもそも比較対象に入らない時代が始まっています。
+    </div>
+  </div>
+</section>
+
+<!-- インバウンド -->
+<section id="inbound">
+  <div class="container">
+    <span class="section-label">インバウンド × MEO</span>
+    <h2>訪日外国人 4,268万人時代の<span class="accent">集客戦略</span></h2>
+    <p class="section-desc">日本への訪日客は2025年に過去最高を更新。この巨大市場を取り込めるかどうかは、Googleマップで外国人に発見されるか否かにかかっています。</p>
+    <div class="inbound-kpis">
+      <div class="inbound-kpi">
+        <div class="num">4,268万人</div>
+        <div class="desc">2025年 訪日外客数 / 過去最高・前年比+15.8%</div>
+        <div class="source">出典: 観光庁・JNTO（2026年1月発表）</div>
+      </div>
+      <div class="inbound-kpi">
+        <div class="num">9.5兆円</div>
+        <div class="desc">2025年 インバウンド消費額 / 過去最高・前年比+16.4%</div>
+        <div class="source">出典: 観光庁（2026年1月）</div>
+      </div>
+      <div class="inbound-kpi">
+        <div class="num">22.9万円</div>
+        <div class="desc">1人あたり平均旅行支出 / ドイツ人は39.4万円（最高水準）</div>
+        <div class="source">出典: 観光庁（2025年）</div>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="num-badge">01</div>
+        <h4>外国人旅行者は「今いる場所」からGoogleマップで探す</h4>
+        <p>訪日外国人は現地滞在中、飲食・買い物・観光スポットをリアルタイムにGoogleマップで検索します。Googleマップは世界220か国以上・月間20億人以上が利用する標準ツールです。</p>
+      </div>
+      <div class="why-card">
+        <div class="num-badge">02</div>
+        <h4>ローカル検索の半数が24時間以内に来店へ転換</h4>
+        <p>Googleの調査では、スマートフォンユーザーの88%がローカル検索を実施し、そのうち約50%が24時間以内に実店舗へ来店。インバウンド客も同様の行動を取ります。</p>
+      </div>
+      <div class="why-card">
+        <div class="num-badge">03</div>
+        <h4>Googleマップは74言語に自動対応</h4>
+        <p>Googleマップは74言語以上でビジネス情報を表示。外国語のクチコミも自動翻訳されるため、MEO対策で多言語最適化した店舗は「英語・中国語・韓国語でも発見される」お店になれます。</p>
+      </div>
+      <div class="why-card">
+        <div class="num-badge">04</div>
+        <h4>多言語対応の競合は少ない ＝ 今が先行優位のチャンス</h4>
+        <p>日本の多くの店舗はGoogleビジネスプロフィールの多言語設定が未整備。英語・中国語・韓国語でプロフィールを整えるだけで、4,000万人超の市場で競合に差をつけられます。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="btn-primary">インバウンド集客について無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- なぜ今AIO重要か -->
+<section id="aio-why">
+  <div class="container">
+    <span class="section-label">なぜ今 AIOが重要なのか</span>
+    <h2>AIに推薦される店と、<span class="accent">されない店の差</span></h2>
+    <p class="section-desc">AI Optimization（AI最適化）。検索順位だけでなく、AIにどう説明されるかが集客を左右する時代です。</p>
+    <div class="aio-3cards">
+      <div class="aio-card">
+        <div class="num">01</div>
+        <h4>検索行動の変化</h4>
+        <p>ユーザーは「調べる」から「AIに聞く」へシフト。ChatGPT、GeminiなどのAIが店舗を直接推薦する時代に。知らず知らずのうちに、候補から外れているかもしれません。</p>
+      </div>
+      <div class="aio-card">
+        <div class="num">02</div>
+        <h4>AIの選択基準</h4>
+        <p>順位ではなく「理解しやすさ」で店を選ぶ。情報が構造化されていないと、AIは正しく紹介できません。どんなに良いサービスでも、AIに伝わらなければ存在しないのと同じです。</p>
+      </div>
+      <div class="aio-card">
+        <div class="num">03</div>
+        <h4>放置するリスク</h4>
+        <p>AIに理解されていない店は、存在していないのと同じ扱い。放置すると、AI対応した競合店が推薦され続けます。今すぐ対策を始めることが、競争優位につながります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIの情報源 -->
+<section id="ai-sources">
+  <div class="container">
+    <span class="section-label">AIの情報源を理解する</span>
+    <h2>主要AIごとの<span class="accent">「情報源と傾向」</span></h2>
+    <p class="section-desc">AIに推薦されるためには、各AIがどこから情報を取得しているかを知ることが不可欠です。各AIの特性に合わせた対策が必要です。</p>
+
+    <div class="ai-source-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+
+      <!-- ChatGPT（まとめ） -->
+      <div class="ai-source-card">
+        <div class="ai-logo">🤖 ChatGPT</div>
+        <p style="font-size:0.85rem;color:#444;line-height:1.8;">
+          ・リアルタイム検索は<span>Bing経由</span>（ChatGPT Plusのみ）<br>
+          ・店舗MAPのデフォルトは<span>Appleマップ</span><br>
+          ・食べログ・Retty・Google Mapなど<span>信頼性の高いページ</span>を参照<br>
+          ・<span>Schema.orgや構造化データ</span>対応ページが優先表示<br>
+          ・<strong>→ Appleマップ登録＋構造化データ整備がカギ</strong>
+        </p>
+      </div>
+
+      <!-- Gemini -->
+      <div class="ai-source-card">
+        <div class="ai-logo">✨ Gemini</div>
+        <p style="font-size:0.85rem;color:#444;line-height:1.8;">
+          ・Google検索と深く統合されている<br>
+          ・Googleマップ上の店舗情報・レビュー・<span>ローカルガイドの評価</span>が参照される<br>
+          ・<span>GBP・ビジネスプロフィールの充実</span>が大きく影響<br>
+          ・写真・投稿・レビュー数がAI表示精度に影響<br>
+          ・<strong>→ GBP充実＋口コミ獲得が最重要</strong>
+        </p>
+      </div>
+
+      <!-- AI Overview / Bing -->
+      <div class="ai-source-card">
+        <div class="ai-logo">🔍 AI Overview ／ Bing</div>
+        <p style="font-size:0.85rem;color:#444;line-height:1.8;">
+          ・Google AI OverviewはGoogleマップ・GBPを<span>主要情報源</span>として活用<br>
+          ・BingはSNSシェア数・話題性がランキングに影響<br>
+          ・ChatGPTの検索結果にもBingの影響が反映<br>
+          ・<span>SNSでの拡散情報設計・話題作り</span>が重要<br>
+          ・<strong>→ Googleマップ最適化＋SNS運用が連動</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:20px;">
+      💡 <strong>共通対策：</strong>GBP充実・Appleマップ登録・構造化データ整備・SNS連動を組み合わせることで、すべての主要AIをカバーできます。これらを一括で行えるのが Mappy＋（synup）です。
+    </div>
+  </div>
+</section>
+
+
+
+<!-- MEO vs AIO -->
+<section id="compare">
+  <div class="container">
+    <span class="section-label">比較</span>
+    <h2>MEO と AIO の<span class="accent">決定的な違い</span></h2>
+    <p class="section-desc">従来のMEOに加え、AIO対策を組み合わせることで集客効果を最大化できます。</p>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>比較項目</th>
+          <th class="meo-head">従来の MEO</th>
+          <th class="aio-head">AIO（AI最適化）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>重視する指標</td><td>検索順位</td><td>AIの回答・推薦</td></tr>
+        <tr><td>最適化の対象</td><td>キーワード</td><td>文脈・専門性</td></tr>
+        <tr><td>必要な施策</td><td>投稿量・頻度</td><td>情報構造の設計</td></tr>
+        <tr><td>到達目標</td><td>検索結果に表示</td><td>AIに推薦される</td></tr>
+        <tr><td>効果の持続性</td><td>継続的な更新が必要</td><td>一度構造化すれば長期効果</td></tr>
+      </tbody>
+    </table>
+    <div class="tip-box" style="margin-top:16px;">※ 今までのMEO施策が間違いではなく、新たにAIO対策を加えることで効果を最大化できます。</div>
+  </div>
+</section>
+
+<!-- GBP評価要素 -->
+<section id="gbp">
+  <div class="container">
+    <span class="section-label">GBP 評価要素</span>
+    <h2>AIに評価される<span class="accent">GBP運用の3要素</span></h2>
+    <p class="section-desc">Googleの8つの評価要素を「距離・関連性・知名度」に整理。対策可能な項目を戦略的に強化します。</p>
+    <div class="gbp-3cols">
+      <div class="gbp-col distance">
+        <h3>距離</h3>
+        <span class="badge badge-no">対策不可</span>
+        <ul>
+          <li>検索ユーザーの位置情報に基づく要素</li>
+          <li>対策不可だが、仕組みの理解が重要</li>
+          <li>位置情報（検索地点）が基準</li>
+        </ul>
+      </div>
+      <div class="gbp-col relevance">
+        <h3>関連性</h3>
+        <span class="badge badge-yes">対策可能</span>
+        <ul>
+          <li>ユーザーが検索したKWと店舗の関連性</li>
+          <li>GBP基本情報の充実・更新頻度</li>
+          <li>店舗説明・ジャンル設定への関連KW含有</li>
+          <li>オンページ（HP情報との整合性）</li>
+          <li>サイテーション（他サイトでの言及）</li>
+        </ul>
+      </div>
+      <div class="gbp-col authority">
+        <h3>知名度</h3>
+        <span class="badge badge-yes">対策可能</span>
+        <ul>
+          <li>口コミ数・高評価率</li>
+          <li>他サイトでの紹介数</li>
+          <li>SNSでの言及・ソーシャル更新</li>
+          <li>GBPエンゲージメント（CTR等）</li>
+          <li>Web上の総合的な知名度</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIO診断 -->
+<section id="aio-check">
+  <div class="container">
+    <span class="section-label">AIO 診断チェック</span>
+    <h2>AIはこの6項目を見て<span class="accent">店を判断しています</span></h2>
+    <p class="section-desc">あなたの店舗は、AIに正しく理解されていますか？まず現状を診断しましょう。</p>
+    <div class="check-grid">
+      <div class="check-item"><div class="check-num">1</div><div><h4>店の説明が明確か</h4><p>AIが一文で店の特徴を要約できる状態か</p></div></div>
+      <div class="check-item"><div class="check-num">2</div><div><h4>GBPが一次情報として機能しているか</h4><p>情報の網羅性・構造化・更新頻度</p></div></div>
+      <div class="check-item"><div class="check-num">3</div><div><h4>口コミが具体的か</h4><p>「良かった」ではなく、サービス内容が語られているか</p></div></div>
+      <div class="check-item"><div class="check-num">4</div><div><h4>専門性が尖っているか</h4><p>何の専門家かAIが判断できるか</p></div></div>
+      <div class="check-item"><div class="check-num">5</div><div><h4>情報に一貫性があるか</h4><p>GBP・HP・SNSで矛盾がないか</p></div></div>
+      <div class="check-item"><div class="check-num">6</div><div><h4>AIに正しく紹介されているか</h4><p>実際にAIに聞いた結果の検証</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- サービスの違い -->
+<section id="service-diff">
+  <div class="container">
+    <span class="section-label">サービスの違い</span>
+    <h2>一般的なMEO vs <span class="accent">H2technology</span></h2>
+    <p class="section-desc">単なる投稿代行・順位対策ではなく、長期的な集客基盤の構築に取り組みます。</p>
+    <div class="diff-grid">
+      <div class="diff-box general">
+        <h3>一般的なMEO</h3>
+        <ul>
+          <li>半年や1年やって終わり、もしくはその繰り返し</li>
+          <li>Webサイト制作を進められるケースが多い</li>
+          <li>3年・5年・10年先の集客安定化を見据えた計画になっていない</li>
+          <li>投稿代行や順位対策のみで、AI対策は含まれない</li>
+        </ul>
+      </div>
+      <div class="diff-box ours">
+        <h3>H2technology</h3>
+        <ul>
+          <li>MEOは土台作り。GBPはWebの玄関として常に最新・綺麗に保ちながら数字を分析</li>
+          <li>SNS・広告・動画・コンテンツなど何を伸ばすべきかを明確に提示・サポート</li>
+          <li>AIO対策を標準搭載し、AIに推薦される状態を構築</li>
+        </ul>
+        <span class="aio-badge">🏆 AIO 対応 標準搭載</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 施策内容 -->
+<section id="tactics">
+  <div class="container">
+    <span class="section-label">施策内容</span>
+    <h2>集客に関わることは<span class="accent">全部丸投げでOK</span></h2>
+    <p class="section-desc">GBP最適化・AIO対策・口コミ管理・インバウンド対応まで、H2technologyがまるごとサポートします。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+      <div style="background:var(--gray-bg);border-radius:16px;padding:28px 24px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🙌</div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:10px;">専門知識は不要</h3>
+        <p style="font-size:0.88rem;color:#555;line-height:1.8;">GBPの設定・更新・AIO対応記事の作成・口コミへの返信まで、専門知識がなくてもすべてお任せいただけます。</p>
+      </div>
+      <div style="background:var(--gray-bg);border-radius:16px;padding:28px 24px;">
+        <div style="font-size:2rem;margin-bottom:12px;">📞</div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:10px;">報告・相談もお任せ</h3>
+        <p style="font-size:0.88rem;color:#555;line-height:1.8;">毎月の分析レポートと定期コンサルで現状と次の一手を共有。「何をすればいいかわからない」をゼロにします。</p>
+      </div>
+      <div style="background:var(--gray-bg);border-radius:16px;padding:28px 24px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🤖</div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:10px;">AI時代の対策も込み</h3>
+        <p style="font-size:0.88rem;color:#555;line-height:1.8;">ChatGPT・Gemini・AI Overviewsに推薦されるためのAIO対策も標準搭載。追加費用なしで対応します。</p>
+      </div>
+      <div style="background:var(--gray-bg);border-radius:16px;padding:28px 24px;">
+        <div style="font-size:2rem;margin-bottom:12px;">🌏</div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:10px;">インバウンド集客も対応</h3>
+        <p style="font-size:0.88rem;color:#555;line-height:1.8;">英語・中国語・韓国語の多言語対応から、訪日外国人向けのGBP最適化まで一括でサポートします。</p>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#fff0f6,#fff8f0);border:2px solid var(--pink);border-radius:16px;padding:24px 28px;text-align:center;">
+      <p style="font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:6px;">「何をやるか」を考える時間は、もう必要ありません。</p>
+      <p style="font-size:0.9rem;color:#666;">H2technologyに集客をまるごとお任せいただき、本業に集中してください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- AIO改善施策 -->
+<section id="aio-tactics">
+  <div class="container">
+    <span class="section-label">AIO 改善施策</span>
+    <h2>シンプルに3つの施策で<span class="accent">AI対策に対応します</span></h2>
+    <div class="aio-tactics-grid">
+      <div class="aio-tactic">
+        <div class="num-big">01</div>
+        <h4>AIが理解できるGBP再設計</h4>
+        <ul>
+          <li>説明文・サービス文の構造化</li>
+          <li>専門性の明文化</li>
+          <li>AIが一文で店の特徴を要約できる状態に整備</li>
+        </ul>
+      </div>
+      <div class="aio-tactic">
+        <div class="num-big">02</div>
+        <h4>AIに拾われる口コミ設計</h4>
+        <ul>
+          <li>口コミ依頼文の改善</li>
+          <li>内容の方向性設計</li>
+          <li>「何が良かった」を具体的に語ってもらう仕組み作り</li>
+        </ul>
+      </div>
+      <div class="aio-tactic">
+        <div class="num-big">03</div>
+        <h4>情報の一貫性調整</h4>
+        <ul>
+          <li>GBP・HP・SNSの文脈統一</li>
+          <li>全チャネルで矛盾なく同じメッセージを発信</li>
+          <li>→ AIの信頼度を向上</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mappy × synup -->
+<section id="mappy-synup" style="background:#fff;">
+  <div class="container">
+    <span class="section-label">超AIO特化オプション</span>
+    <h2>Mappy × synup × <span class="accent">AI Overviews（Google）</span></h2>
+    <p class="section-desc">MappyはGoogleや他の検索エンジンのAIに「正確な情報源」として認識させる基盤を構築します。契約するだけで、AI検索時代に必要なインフラがまるごと揃います。</p>
+
+    <!-- synupエンジン説明 -->
+    <div style="background:linear-gradient(135deg,#fff0f6,#f3eeff);border:2px solid rgba(232,50,122,0.2);border-radius:20px;padding:28px 32px;display:flex;align-items:center;gap:24px;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="flex-shrink:0;background:#fff;border:2px solid #e0dcea;border-radius:14px;padding:14px 20px;text-align:center;">
+        <div style="font-size:10px;font-weight:700;color:#888;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:6px;">Engine</div>
+        <div style="font-size:26px;font-weight:900;color:#1b2d5b;letter-spacing:-1px;">›<span style="color:#00aeef;">synup</span></div>
+      </div>
+      <p style="font-size:0.9rem;color:#555;line-height:1.8;flex:1;min-width:240px;">
+        これらの機能を支えるエンジンが<strong style="color:var(--pink);">synup</strong>（世界シェアNo.1のローカル情報配信プラットフォーム）です。Mappyを契約することで、synupの強力なインフラをフルに活用できます。<strong style="color:var(--pink);">synup単体では日本でのサービス提供は行っておらず、Mappy（H2technology）を通じてのみ利用可能です。</strong>
+      </p>
+    </div>
+
+    <!-- 3つの強み -->
+    <div class="merit-3cols" style="margin-bottom:32px;">
+      <div class="merit-card">
+        <div class="m-icon">🌍</div>
+        <h3>世界最大113媒体へ拡散</h3>
+        <p>Googleマップ、Appleマップ、Bingなど113媒体へ正確な情報を一括拡散。AIに参照される可能性が飛躍的に高まります。</p>
+      </div>
+      <div class="merit-card">
+        <div class="m-icon">🤖</div>
+        <h3>AIへの直接登録</h3>
+        <p>店舗情報がAIの学習データに組み込まれ、AI Overview・ChatGPT・Geminiなどで引用される機会が大幅に増加します。</p>
+      </div>
+      <div class="merit-card">
+        <div class="m-icon">✅</div>
+        <h3>情報の正確性維持</h3>
+        <p>常に最新かつ一貫した情報を複数媒体で保つことでAIの信頼性が上がり、検索での表示機会が継続的に向上します。</p>
+      </div>
+    </div>
+
+    <!-- 4つの効果 -->
+    <div class="synup-effects" style="margin-bottom:28px;">
+      <div style="text-align:center;">
+        <div class="effect-circle"><div class="e-num">01</div><h4>情報の正確性と信頼性が上がる</h4></div>
+      </div>
+      <div style="text-align:center;">
+        <div class="effect-circle"><div class="e-num">02</div><h4>上位に表示されやすくなる</h4><p style="font-size:0.7rem;">AI OverviewsやChatGPT等でもヒット</p></div>
+      </div>
+      <div style="text-align:center;">
+        <div class="effect-circle"><div class="e-num">03</div><h4>音声検索でも表示されやすくなる</h4><p style="font-size:0.7rem;">AlexaやSiri等</p></div>
+      </div>
+      <div style="text-align:center;">
+        <div class="effect-circle"><div class="e-num">04</div><h4>SEO・MEO対策に繋がりやすくなる</h4></div>
+      </div>
+    </div>
+
+    <!-- 独占バナー -->
+    <div style="background:linear-gradient(135deg,#1a0a3e,#2d0d5e);border-radius:20px;padding:36px;color:#fff;position:relative;overflow:hidden;">
+      <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(232,50,122,0.1);top:-100px;right:-80px;"></div>
+      <div style="position:relative;">
+        <div style="display:inline-block;background:var(--pink);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:4px;letter-spacing:0.12em;margin-bottom:16px;">🔒 EXCLUSIVE PARTNERSHIP</div>
+        <h3 style="font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:12px;">Mappyだけがsynupを使える。<br><span style="color:var(--pink);">他社には真似できない。</span></h3>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:16px;">synupは日本国内においてMappy（H2technology）が独占的に取り扱うパートナーです。競合他社がどれだけAIO対策を強化しようとしても、このインフラを使うことは不可能。</p>
+        <div style="background:rgba(255,200,0,0.12);border:1px solid rgba(255,200,0,0.35);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:1.4rem;">⚠️</span>
+          <p style="font-size:0.85rem;color:rgba(255,255,255,0.85);line-height:1.6;">このAI集客インフラを使えるのは、<strong style="color:#ffd166;">Mappy（H2technology）を契約したお客様だけです。</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-box" style="margin-top:20px;">
+      💡 今のうちに、GBPを充実させ、synup・AI Overviews等を制することがキーポイント！
+    </div>
+  </div>
+</section>
+
+<!-- 対応媒体一覧（NEW） -->
+<section id="platforms">
+  <div class="container">
+    <span class="section-label">対応媒体一覧</span>
+    <div class="platform-count">113+</div>
+    <h2 style="text-align:center;margin-bottom:8px;">世界<span class="accent">113媒体以上</span>に同時配信</h2>
+    <p class="section-desc" style="text-align:center;">主要なAI・地図・グルメ・ナビゲーション・金融・EC媒体に一括で情報を拡散します。</p>
+    <div class="platforms-border">
+      <div class="platform-category">
+        <h4>🤖 AI・音声アシスタント</h4>
+        <div class="platform-badges">
+          <span class="p-badge">ChatGPT</span><span class="p-badge">Gemini</span><span class="p-badge">Perplexity</span>
+          <span class="p-badge">Copilot</span><span class="p-badge">alexa</span><span class="p-badge">Siri</span>
+          <span class="p-badge">Cortana</span><span class="p-badge">Bixby</span><span class="p-badge">Google アシスタント</span>
+          <span class="p-badge">IntellyChat</span>
+        </div>
+      </div>
+      <div class="platform-category">
+        <h4>🗺️ 地図・ナビゲーション</h4>
+        <div class="platform-badges">
+          <span class="p-badge">Google</span><span class="p-badge">Baidu</span><span class="p-badge">ロケスマWEB</span>
+          <span class="p-badge">Mapion</span><span class="p-badge">MapFan</span><span class="p-badge">NAVITIME</span>
+          <span class="p-badge">MAPS.ME</span><span class="p-badge">Navmii</span><span class="p-badge">HERE</span>
+          <span class="p-badge">Waze</span><span class="p-badge">TomTom</span><span class="p-badge">Garmin</span>
+          <span class="p-badge">localplace</span><span class="p-badge">Where To?</span>
+        </div>
+      </div>
+      <div class="platform-category">
+        <h4>🍽️ グルメ・生活サービス</h4>
+        <div class="platform-badges">
+          <span class="p-badge">食べログ</span><span class="p-badge">minimo</span>
+          <span class="p-badge">エキテン</span><span class="p-badge">EPARK</span>
+          <span class="p-badge">ホットペッパービューティー</span><span class="p-badge">Hotfrog</span>
+        </div>
+      </div>
+      <div class="platform-category">
+        <h4>💰 金融・決済・EC</h4>
+        <div class="platform-badges">
+          <span class="p-badge">SMBC</span><span class="p-badge">PayPay</span><span class="p-badge">MUFG</span>
+          <span class="p-badge">Rakuten</span><span class="p-badge">Amazon</span>
+          <span class="p-badge">American Express</span>
+        </div>
+      </div>
+      <div class="platform-category">
+        <h4>🚗 自動車・モビリティ</h4>
+        <div class="platform-badges">
+          <span class="p-badge">Toyota</span><span class="p-badge">Honda</span><span class="p-badge">Nissan</span>
+          <span class="p-badge">Mazda</span><span class="p-badge">Subaru</span><span class="p-badge">Mitsubishi</span>
+          <span class="p-badge">Suzuki</span><span class="p-badge">BMW</span><span class="p-badge">Mercedes-Benz</span>
+          <span class="p-badge">Audi</span><span class="p-badge">Lexus</span><span class="p-badge">Volvo</span>
+          <span class="p-badge">Volkswagen</span><span class="p-badge">Jeep</span><span class="p-badge">Land Rover</span>
+          <span class="p-badge">MINI</span><span class="p-badge">Jaguar</span><span class="p-badge">Porsche</span>
+          <span class="p-badge">Hyundai</span><span class="p-badge">KIA</span><span class="p-badge">Infiniti</span>
+          <span class="p-badge">Acura</span><span class="p-badge">Renault</span><span class="p-badge">Fiat</span>
+          <span class="p-badge">Citroën</span><span class="p-badge">Opel</span><span class="p-badge">Alfa Romeo</span>
+          <span class="p-badge">Škoda</span><span class="p-badge">Alpine</span><span class="p-badge">Lancia</span>
+          <span class="p-badge">Peugeot</span><span class="p-badge">DS Automobiles</span><span class="p-badge">Vauxhall</span>
+          <span class="p-badge">DiDi</span><span class="p-badge">LUUP</span><span class="p-badge">HELLO CYCLING</span>
+        </div>
+      </div>
+      <div class="platform-category">
+        <h4>📋 求人・その他</h4>
+        <div class="platform-badges">
+          <span class="p-badge">タウンワーク</span><span class="p-badge">バイトル</span>
+          <span class="p-badge">YouTube</span><span class="p-badge">Pokémon GO</span>
+          <span class="p-badge">Life360</span><span class="p-badge">YP listing</span>
+          <span class="p-badge">SpeedyLocal</span><span class="p-badge">Tupalo</span>
+          <span class="p-badge">SpeydyLocal</span><span class="p-badge">Joomlocal</span>
+          <span class="p-badge">BrownBook</span><span class="p-badge">SmartBusinessSearch</span>
+          <span class="more-badge">他続々追加予定！</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ビジネス情報一元管理（NEW） -->
+<section id="unified">
+  <div class="container">
+    <span class="section-label">ビジネス情報の一元管理を実現</span>
+    <h2>全プラットフォームを<span class="accent">ひとつのダッシュボード</span>で管理</h2>
+    <div class="unified-grid">
+      <div class="unified-img-box">
+        <p style="font-size:0.8rem;font-weight:700;margin-bottom:12px;color:#666;">ボイスアシスタントリスティング</p>
+        <table class="listing-table">
+          <thead><tr><th>アシスタント</th><th>連携ステータス</th><th>アクションが必要</th></tr></thead>
+          <tbody>
+            <tr><td>🔵 Cortana</td><td class="status-ok">✅ 同期済み</td><td style="color:#16a34a;">No</td></tr>
+            <tr><td>🔵 Alexa</td><td class="status-ok">✅ 同期済み</td><td style="color:#16a34a;">No</td></tr>
+            <tr><td>🍎 Siri</td><td class="status-pending">⏳ 進行中</td><td style="color:#16a34a;">No</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.8rem;font-weight:700;margin: 16px 0 12px;color:#666;">プラットフォームリスティング</p>
+        <table class="listing-table">
+          <thead><tr><th>プラットフォーム</th><th>ステータス</th><th>インデックス</th></tr></thead>
+          <tbody>
+            <tr><td>🔵 Bing</td><td class="status-ok">✅ 同期済み</td><td style="color:#16a34a;">Yes</td></tr>
+            <tr><td>🍎 Apple Maps</td><td class="status-pending">準備中</td><td style="color:#f59e0b;">No</td></tr>
+            <tr><td>🟠 Hotfrog</td><td class="status-ok">✅ 同期済み</td><td style="color:#16a34a;">Yes</td></tr>
+          </tbody>
+        </table>
+        <p style="text-align:center;font-size:0.78rem;background:#111;color:#fff;padding:10px;border-radius:6px;margin-top:12px;">リンクを押下すると掲載先に移管！</p>
+      </div>
+      <div class="unified-points">
+        <div class="u-point">
+          <h4>AIリスティング</h4>
+          <p>AIが自動で取得・管理する主要サイト一覧。ChatGPT、Gemini、Copilotなどへの掲載状況をリアルタイムで把握できます。</p>
+        </div>
+        <div class="u-point">
+          <h4>ボイスアシスタントリスティング</h4>
+          <p>Alexa、Siriなど音声検索に対応したサービスとの連携状況を表示。スマートスピーカーからの問い合わせにも対応できます。</p>
+        </div>
+        <div class="u-point">
+          <h4>プラットフォームリスティング</h4>
+          <p>各プラットフォームの連携状況、インデックスの有無、掲載の有無の表示。問題のある媒体を即座に特定し、修正できます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 未来展望（NEW） -->
+<section id="future">
+  <div class="container">
+    <span class="section-label" style="color:#ff69b4;">未来展望</span>
+    <h2>AIが予約・通話を<span class="accent">代行する時代</span>へ</h2>
+    <p class="future-headline">すでにGoogleやOpenAIは以下のような機能を研究・実装中！</p>
+    <div class="future-items">
+      <div class="future-item">
+        <h4>AI自動電話（Google Duplex）</h4>
+        <p>「空いてますか？」とAIが代わりに電話する。AIがそのまま予約まで完了させる体験が目前に。</p>
+      </div>
+      <div class="future-item">
+        <h4>完全自動予約フロー</h4>
+        <p>ユーザーが「この店を予約して」と言えば、AIが検索→確認→予約まで一気通貫で完了する。</p>
+      </div>
+    </div>
+    <div class="future-conclusion">
+      「検索に出る」だけでなく <span>「その場で完結するUX」</span>に進化する時代が目前。<br>
+      だからこそ、AIが読み込む情報ソースを整備することが最優先。
+    </div>
+  </div>
+</section>
+
+<!-- AI店舗探し（NEW） -->
+<section id="ai-future">
+  <div class="container">
+    <span class="section-label">AI時代の集客</span>
+    <h2>AI検索時代に<span class="accent">対応するために</span></h2>
+    <div class="ai-future-grid">
+      <div class="ai-future-card">
+        <div style="font-size:2rem;margin-bottom:12px;">🤖</div>
+        <h4>AIによる店舗探し</h4>
+        <p>AIがユーザーの利用条件に合った最適な店舗を探し出す。情報が整備されていない店舗は、そもそも候補に入らない。</p>
+      </div>
+      <div class="ai-future-card">
+        <div style="font-size:2rem;margin-bottom:12px;">📅</div>
+        <h4>自動予約・空席確認</h4>
+        <p>将来的にはAIが自動で予約や空席確認まで行い、手間なく店舗を利用できるようになる。今から情報を整えておくことが重要。</p>
+      </div>
+    </div>
+    <div class="exclusive-banner">
+      <h3>Synupを日本国内で取り扱えるのは<span>当社のみ！</span></h3>
+      <p>時代に乗り遅れないように、今からぜひ対策を！<br>この先進的なAI検索時代に対応するためには、synupの導入が不可欠です。</p>
+      <div style="margin-top:20px;">
+        <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="btn-primary">synupについて詳しく相談する →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 専用ツール Mappy -->
+<section id="mappy">
+  <div class="container">
+    <span class="section-label">専用ツール</span>
+    <h2>GBP運用ツール <span class="accent">「Mappy」</span>をご提供</h2>
+    <p class="section-desc">データに基づく継続的な改善を可能にする、独自開発のGBP管理ツールです。</p>
+    <div class="mappy-features">
+      <div class="mappy-feat"><div class="icon">🗺️</div><h4>直接・間接検索数の測定</h4><p>ユーザーがどのようにお店を見つけているかをデータで可視化</p></div>
+      <div class="mappy-feat"><div class="icon">📈</div><h4>キーワード順位の推移</h4><p>対策キーワードの順位変動を時系列で追跡</p></div>
+      <div class="mappy-feat"><div class="icon">⭐</div><h4>口コミ管理・促進機能</h4><p>SMS一括送信（最大50通）による口コミ獲得の効率化</p></div>
+      <div class="mappy-feat"><div class="icon">📊</div><h4>ダッシュボード機能</h4><p>重要指標をひと目で確認。月次レポートの自動生成</p></div>
+    </div>
+    <div class="mappy-note">※ 良い口コミのみをGoogle公開し、低評価は内部フィードバックとして活用する仕組みを搭載</div>
+  </div>
+</section>
+
+<!-- プラン -->
+<section id="plans">
+  <div class="container">
+    <span class="section-label">プランのご案内</span>
+    <h2>ご状況に合わせた<span class="accent">3つのプラン</span></h2>
+    <p class="section-desc">まずは小さく始めて、成果を確認してから本格展開することも可能です。</p>
+    <div class="plans-grid">
+
+      <!-- Mappy＋ -->
+      <div class="plan-card">
+        <div class="plan-name">Mappy＋</div>
+        <div class="plan-price"><span class="yen">¥</span><span class="num">18,000</span><span class="unit">円/月</span></div>
+        <div class="plan-tax">税込 ¥19,800</div>
+        <div class="plan-period">契約期間：12ヶ月</div>
+        <ul class="plan-features">
+          <li>AIO強化対策</li>
+          <li>外部媒体登録 100件以上</li>
+          <li>AI参照元の網羅的整備</li>
+          <li style="font-size:0.7rem;">Appleマップ・各種AI媒体への直接登録</li>
+          <li>Instagram連動機能</li>
+          <li>口コミ促進機能</li>
+          <li>アンケート機能搭載</li>
+          <li>分析レポート</li>
+        </ul>
+      </div>
+
+      <!-- スタンダードプラン -->
+      <div class="plan-card">
+        <div class="plan-name">スタンダードプラン</div>
+        <div class="plan-price"><span class="yen">¥</span><span class="num">20,000</span><span class="unit">円/月</span></div>
+        <div class="plan-tax">税込 ¥22,000</div>
+        <div class="plan-period">契約期間：12ヶ月</div>
+        <ul class="plan-features">
+          <li>GBP最適化</li>
+          <li>AIO対応記事　1回/月</li>
+          <li>ブログサイテーション　1回/月</li>
+          <li>分析ツール</li>
+          <li>Instagram連動</li>
+          <li>SMS送信</li>
+          <li>口コミ促進機能</li>
+          <li>アンケート機能</li>
+          <li>改ざん防止対応</li>
+          <li>口コミ対応（AI対応）</li>
+          <li>NAP調査</li>
+          <li>定例コンサル　2回/年</li>
+        </ul>
+      </div>
+
+      <!-- プレミアムプラン -->
+      <div class="plan-card featured">
+        <span class="plan-recommend">おすすめ</span>
+        <div class="plan-name">プレミアムプラン</div>
+        <div class="plan-price"><span class="yen">¥</span><span class="num">50,000</span><span class="unit">円/月</span></div>
+        <div class="plan-tax">税込 ¥55,000</div>
+        <div class="plan-period">契約期間：12ヶ月</div>
+        <ul class="plan-features">
+          <li>GBP最適化</li>
+          <li>AIO対応記事　4回/月</li>
+          <li>ブログサイテーション　4回/月</li>
+          <li>外部媒体登録 100件以上</li>
+          <li>AI参照元の網羅的整備</li>
+          <li style="font-size:0.7rem;">Appleマップ・各種AI媒体への直接登録</li>
+          <li>改ざん防止対応</li>
+          <li>口コミ対応（AI対応）</li>
+          <li>インバウンド対応</li>
+          <li>Instagram連動</li>
+          <li>競合分析 定期</li>
+          <li>口コミ促進機能</li>
+          <li>アンケート機能</li>
+          <li>NAP調査</li>
+          <li>定期コンサル　4回/年</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SNS運用 -->
+    <div class="option-box" style="margin-top:24px;">
+      <div>
+        <div class="ig-logo">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="10" fill="rgba(255,255,255,0.2)"/>
+            <rect x="9" y="9" width="18" height="18" rx="5" stroke="#fff" stroke-width="2.2" fill="none"/>
+            <circle cx="18" cy="18" r="4.5" stroke="#fff" stroke-width="2.2" fill="none"/>
+            <circle cx="24" cy="12" r="1.4" fill="#fff"/>
+          </svg>
+        </div>
+        <h3>SNS運用</h3>
+        <p>Instagram・TikTokの運用代行から広告運用まで。SNS × MEO の連携で集客を最大化します。</p>
+        <ul>
+          <li>Instagram 運用代行（メイン）</li>
+          <li>TikTok 運用代行 ― 成果報酬型・求人採用に最適</li>
+          <li>コンテンツ企画・制作</li>
+          <li>投稿スケジュール管理</li>
+          <li>エンゲージメント分析</li>
+          <li>Instagram連動・競合分析</li>
+          <li>月刊レポート・定期コンサル</li>
+          <li>メタ / Google 広告運用</li>
+        </ul>
+      </div>
+      <div class="option-price-box">
+        <div class="op-unit" style="margin-bottom:12px;">詳細はこちら</div>
+        <a href="https://nanbara-cloud.github.io/instagram/instagram-service-lp.html" target="_blank"
+           style="display:block;background:rgba(255,255,255,0.2);backdrop-filter:blur(4px);border:2px solid rgba(255,255,255,0.5);color:#fff;padding:12px 20px;border-radius:20px;font-size:0.85rem;font-weight:700;text-decoration:none;margin-bottom:10px;white-space:nowrap;transition:background 0.2s;">
+          サービス詳細を見る →
+        </a>
+        <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141"
+           style="display:block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);color:#fff;padding:10px 20px;border-radius:20px;font-size:0.82rem;font-weight:700;text-decoration:none;white-space:nowrap;transition:background 0.2s;">
+          無料相談する →
+        </a>
+        <div class="op-unit" style="margin-top:12px;">契約期間：3ヶ月更新</div>
+      </div>
+    </div>
+
+    <!-- 単品オプション -->
+    <div style="margin-top:20px;">
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:#333;">＋ 単品オプション</h3>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <div style="background:#f7f7f7;border-radius:14px;padding:22px 18px;border:1px solid #eee;text-align:center;">
+          <div style="font-size:1.6rem;margin-bottom:8px;">📢</div>
+          <div style="font-size:0.82rem;font-weight:700;color:#333;margin-bottom:6px;">広告運用</div>
+          <div style="font-size:1.4rem;font-weight:900;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">運用額の10%</div>
+          <p style="font-size:0.75rem;color:#666;margin-top:8px;line-height:1.6;">メタ・Google広告の運用代行。広告費に対する完全成果連動型。</p>
+        </div>
+        <div style="background:#f7f7f7;border-radius:14px;padding:22px 18px;border:1px solid #eee;text-align:center;">
+          <div style="font-size:1.6rem;margin-bottom:8px;">✍️</div>
+          <div style="font-size:0.82rem;font-weight:700;color:#333;margin-bottom:6px;">AIO対応記事作成</div>
+          <div style="font-size:1.4rem;font-weight:900;background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">¥5,000<span style="font-size:0.9rem;"> / 記事</span></div>
+          <p style="font-size:0.75rem;color:#666;margin-top:8px;line-height:1.6;">AI対策に最適化した記事を1記事から発注可能。ブログサイテーション用途に最適。</p>
+        </div>
+        <div style="background:#fff0f6;border-radius:14px;padding:22px 18px;border:2px solid var(--pink);text-align:center;">
+          <div style="font-size:1.6rem;margin-bottom:8px;">🌐</div>
+          <div style="font-size:0.82rem;font-weight:700;color:#333;margin-bottom:6px;">WEB制作</div>
+          <div style="font-size:1.4rem;font-weight:900;color:var(--pink);">無料相談</div>
+          <p style="font-size:0.75rem;color:#666;margin-top:8px;line-height:1.6;">ホームページ・LP制作の無料相談を受付中。MEO・AIO対策との連携提案も可能。</p>
+          <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" style="display:inline-block;margin-top:10px;background:var(--grad);color:#fff;padding:7px 16px;border-radius:16px;font-size:0.75rem;font-weight:700;text-decoration:none;">相談する →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- スケジュール -->
+<section id="schedule">
+  <div class="container">
+    <span class="section-label">スケジュール</span>
+    <h2>対策のスケジュール<span class="accent">について</span></h2>
+    <p class="section-desc">初回から3ヶ月で基盤を構築し、データと成果を確認しながら進めます。</p>
+    <div class="schedule-steps">
+      <div class="schedule-step">
+        <div class="step-circle">申</div>
+        <div class="step-label">申込月</div>
+        <div class="step-title">契約締結・対策準備</div>
+      </div>
+      <div class="schedule-step">
+        <div class="step-circle">1</div>
+        <div class="step-label">1ヶ月目</div>
+        <div class="step-title">初期設定・調査</div>
+        <ul class="step-items">
+          <li>内部調査・ヒアリング</li>
+          <li>GBP基本情報の最適化</li>
+          <li>AIO診断実施</li>
+          <li>KW分析・競合分析</li>
+        </ul>
+      </div>
+      <div class="schedule-step">
+        <div class="step-circle">2</div>
+        <div class="step-label">2ヶ月目</div>
+        <div class="step-title">本格実施</div>
+        <ul class="step-items">
+          <li>内部対策の本格実施</li>
+          <li>AIO改善施策開始</li>
+          <li>クエリ分析・効果検証</li>
+        </ul>
+      </div>
+      <div class="schedule-step">
+        <div class="step-circle">3</div>
+        <div class="step-label">3ヶ月目</div>
+        <div class="step-title">第二フェーズ提案</div>
+        <ul class="step-items">
+          <li>定期オンラインMTG</li>
+          <li>第二フェーズのご提案</li>
+        </ul>
+      </div>
+    </div>
+    <div class="schedule-note">
+      初回から3ヶ月間で基盤を構築し、「情報の統一」と「情報の増加」を図りながら、双方でチェックを行い第二フェーズをご提案します。
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <h2>AIはすでに「おすすめの店」を<br>選び始めています。</h2>
+    <p>選ばれる側に回るかどうか、それを決めるのは <strong>今</strong> です。</p>
+    <a href="https://timerex.net/s/r.nanbara_5e4f/014f6141" class="btn-white">無料相談を予約する</a>
+    <a href="#plans" class="btn-white" style="background:transparent;color:#fff;border:2px solid #fff;">プランを確認する</a>
+    <p class="cta-note">※ 無理な営業は一切いたしません。お気軽にお問い合わせください。</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Copyright © 2025 H2technology Inc. All Rights Reserved.</p>
+</footer>
+
+<!-- ===== ANIMATION SYSTEM ===== -->
+<style>
+/* --- Scroll Reveal Base --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-left  { opacity: 0; transform: translateX(-50px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right { opacity: 0; transform: translateX(50px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+.reveal-scale { opacity: 0; transform: scale(0.88); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+/* Stagger children */
+.stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.stagger > *.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Hero Animations --- */
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroBadge {
+  from { opacity: 0; transform: scale(0.8) translateY(-10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+#hero .hero-badge { animation: heroBadge 0.6s ease forwards; }
+#hero h1          { animation: heroFadeIn 0.8s 0.2s ease both; }
+#hero p.sub       { animation: heroFadeIn 0.8s 0.4s ease both; }
+#hero .btn-primary, #hero .btn-secondary { animation: heroFadeIn 0.8s 0.6s ease both; }
+#hero .hero-kpis  { animation: heroFadeIn 0.8s 0.8s ease both; }
+
+/* --- Floating Particles --- */
+#hero { position: relative; overflow: hidden; }
+.particle {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: var(--grad); opacity: 0.08;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { transform: translateY(100%) scale(0); opacity: 0; }
+  10%  { opacity: 0.08; }
+  90%  { opacity: 0.08; }
+  100% { transform: translateY(-120%) scale(1.2); opacity: 0; }
+}
+
+/* --- Gradient shimmer on section labels --- */
+.section-label {
+  background: linear-gradient(90deg, var(--pink) 0%, var(--orange) 40%, var(--pink) 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+@keyframes shimmer { to { background-position: 200% center; } }
+
+/* --- KPI counter animation --- */
+.kpi-card .num, .stat-card .number, .inbound-kpi .num {
+  display: inline-block;
+}
+
+/* --- Pulse ring on CTA button --- */
+.btn-primary {
+  position: relative;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute; inset: 0; border-radius: 40px;
+  background: var(--grad); opacity: 0;
+  animation: pulse-ring 2.5s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+/* --- Hover lifts --- */
+.problem-card, .stat-card, .aio-card, .plan-card,
+.tactic-card, .aio-tactic, .merit-card, .why-card,
+.check-item, .mappy-feat, .ai-future-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.problem-card:hover   { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(232,50,122,0.15); }
+.stat-card:hover      { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+.aio-card:hover       { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(232,50,122,0.12); }
+.plan-card:hover      { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(0,0,0,0.12); }
+.tactic-card:hover    { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.aio-tactic:hover     { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(0,0,0,0.1); }
+.merit-card:hover     { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(232,50,122,0.12); }
+.why-card:hover       { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(232,50,122,0.1); }
+.mappy-feat:hover     { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.ai-future-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+.p-badge:hover        { transform: scale(1.05); }
+
+/* --- Scroll indicator bounce --- */
+.scroll-indicator {
+  display: flex; flex-direction: column; align-items: center; margin-top: 40px;
+  animation: heroFadeIn 1s 1.2s ease both;
+}
+.scroll-dot {
+  width: 6px; height: 6px; background: var(--pink); border-radius: 50%;
+  animation: scrollBounce 1.5s ease-in-out infinite;
+}
+.scroll-dot:nth-child(2) { animation-delay: 0.2s; margin-top: 4px; }
+.scroll-dot:nth-child(3) { animation-delay: 0.4s; margin-top: 4px; }
+@keyframes scrollBounce {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50%       { opacity: 1;   transform: translateY(6px); }
+}
+
+/* --- Number flip animation --- */
+@keyframes numberFlip {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.kpi-card.visible .num   { animation: numberFlip 0.6s 0.1s ease both; }
+
+/* --- Gradient border pulse on featured plan --- */
+.plan-card.featured {
+  animation: borderPulse 3s ease-in-out infinite;
+}
+@keyframes borderPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,50,122,0.3); }
+  50%       { box-shadow: 0 0 0 8px rgba(232,50,122,0); }
+}
+
+/* --- Typewriter cursor on hero --- */
+.typewriter-cursor {
+  display: inline-block; width: 3px; height: 1em;
+  background: var(--pink); vertical-align: middle; margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* --- Section entrance gradient line --- */
+section::before {
+  content: '';
+  display: block; height: 3px; width: 0;
+  background: var(--grad);
+  transition: width 0.8s ease;
+  border-radius: 2px;
+  margin-bottom: -3px;
+}
+section.section-active::before { width: 100%; }
+
+/* --- era-step hover --- */
+.era-step { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.era-step:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(232,50,122,0.15); }
+.era-step.current:hover { box-shadow: 0 16px 36px rgba(232,50,122,0.3); }
+
+/* --- Effect circles spin on hover --- */
+.effect-circle { transition: transform 0.4s ease; }
+.effect-circle:hover { transform: scale(1.08) rotate(3deg); }
+
+/* --- Global data item slide --- */
+.global-item { 
+  opacity: 0; transform: translateX(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.global-item.visible { opacity: 1; transform: translateX(0); }
+
+/* --- Predict bar width animation --- */
+.predict-bar { 
+  transition: flex 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* --- Floating badge on exclusive section --- */
+.exclusive-banner { position: relative; overflow: hidden; }
+.exclusive-banner::after {
+  content: ''; position: absolute;
+  top: -50%; left: -60%; width: 40%; height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  transform: skewX(-20deg);
+  animation: sweepShine 4s ease-in-out infinite;
+}
+@keyframes sweepShine {
+  0%   { left: -60%; }
+  100% { left: 120%; }
+}
+
+/* --- Nav link smooth --- */
+nav { transition: background 0.3s ease, box-shadow 0.3s ease; }
+nav.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.1); background: rgba(255,255,255,0.99); }
+
+@media (max-width: 768px) {
+  .nav-top { padding: 12px 20px; }
+  .nav-links {
+    padding: 6px 12px 10px; gap: 4px;
+    border-top: 1px solid #f0f0f0;
+  }
+  .nav-link { font-size: 0.72rem; padding: 4px 8px; }
+}
+
+/* --- CTA section pulse text --- */
+#cta h2 { animation: ctaTitle 1s ease both; }
+@keyframes ctaTitle {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Platform badges wave --- */
+.platform-badges .p-badge {
+  animation: none;
+}
+.platforms-border:hover .p-badge {
+  animation: waveBadge 0.4s ease both;
+}
+
+/* --- Check item pop --- */
+.check-item { transition: transform 0.3s ease, background 0.3s ease; }
+.check-item:hover { transform: scale(1.02); background: #fff0f6; }
+</style>
+
+<script>
+/* ===================================================
+   ANIMATION CONTROLLER
+=================================================== */
+
+// 1. Floating particles in hero
+(function createParticles() {
+  const hero = document.getElementById('hero');
+  for (let i = 0; i < 14; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 60 + 20;
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random() * 100}%;
+      bottom: -${size}px;
+      animation-duration: ${Math.random() * 12 + 10}s;
+      animation-delay: ${Math.random() * 8}s;
+    `;
+    hero.appendChild(p);
+  }
+})();
+
+// 2. Scroll-reveal with IntersectionObserver
+(function initScrollReveal() {
+  const items = document.querySelectorAll(
+    '.reveal, .reveal-left, .reveal-right, .reveal-scale, .global-item'
+  );
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(el => obs.observe(el));
+})();
+
+// 3. Stagger children animation
+(function initStagger() {
+  const staggerEls = document.querySelectorAll('.stagger');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const children = e.target.querySelectorAll(':scope > *');
+        children.forEach((child, i) => {
+          setTimeout(() => child.classList.add('visible'), i * 100);
+        });
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  staggerEls.forEach(el => obs.observe(el));
+})();
+
+// 4. Number counter animation
+function animateCounter(el, target, suffix, duration) {
+  const start = 0;
+  const startTime = performance.now();
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(eased * target);
+    el.textContent = current.toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+(function initCounters() {
+  const counterMap = [
+    { selector: '.hero-kpis .kpi-card:nth-child(2) .num', target: 90,  suffix: '%', dur: 1500 },
+  ];
+  
+  // Stat cards with percentage signs
+  document.querySelectorAll('.stat-card .number').forEach(el => {
+    const text = el.textContent.trim();
+    const match = text.match(/^([\d.]+)/);
+    if (!match) return;
+    const num = parseFloat(match[1]);
+    const suffix = text.replace(match[1], '');
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounter(el, num, suffix, 1600);
+        obs.unobserve(el);
+      }
+    }, { threshold: 0.5 });
+    obs.observe(el);
+  });
+
+  // Global percentage items
+  document.querySelectorAll('.global-pct').forEach(el => {
+    const text = el.textContent.trim();
+    const match = text.match(/^([\d,]+)/);
+    if (!match) return;
+    const num = parseFloat(match[1].replace(',',''));
+    const suffix = text.replace(match[1], '');
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounter(el, num, suffix, 1200);
+        obs.unobserve(el);
+      }
+    }, { threshold: 0.5 });
+    obs.observe(el);
+  });
+})();
+
+// Active nav link on scroll
+(function initActiveNav() {
+  const links = document.querySelectorAll('.nav-link');
+  const sections = [...links].map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+  function onScroll() {
+    const scrollY = window.scrollY + 120;
+    let current = sections[0];
+    sections.forEach(sec => { if (sec.offsetTop <= scrollY) current = sec; });
+    links.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current.id);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// Mobile: nav-links wrap naturally on small screens
+
+
+// 6. Section active state (top line reveal)
+(function initSectionLine() {
+  const sections = document.querySelectorAll('section');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('section-active');
+    });
+  }, { threshold: 0.05 });
+  sections.forEach(s => obs.observe(s));
+})();
+
+// 7. Add reveal classes to key elements automatically
+(function autoReveal() {
+  const selectors = [
+    ['h2',                 'reveal'],
+    ['.section-label',     'reveal'],
+    ['.section-desc',      'reveal'],
+    ['.problem-card',      'stagger-child'],
+    ['.stat-card',         'stagger-child'],
+    ['.aio-card',          'reveal-scale'],
+    ['.plan-card',         'reveal-scale'],
+    ['.tactic-card',       'stagger-child'],
+    ['.era-step',          'reveal-scale'],
+    ['.gbp-col',           'reveal-scale'],
+    ['.check-item',        'reveal'],
+    ['.diff-box',          'stagger-child'],
+    ['.merit-card',        'reveal-scale'],
+    ['.why-card',          'reveal'],
+    ['.mappy-feat',        'stagger-child'],
+    ['.ai-source-card',    'reveal'],
+    ['.ai-future-card',    'reveal-scale'],
+    ['.hero-kpis .kpi-card','reveal-scale'],
+    ['.inbound-kpi',       'reveal-scale'],
+    ['.aio-tactic',        'reveal-scale'],
+    ['.effect-circle',     'reveal-scale'],
+    ['.click-card',        'reveal-scale'],
+    ['.future-item',       'reveal'],
+    ['.unified-img-box',   'reveal-left'],
+    ['.unified-points',    'reveal-right'],
+    ['.synup-intro',       'reveal'],
+    ['.exclusive-banner',  'reveal'],
+    ['.tip-box',           'reveal'],
+    ['.option-box',        'reveal'],
+    ['.case-intro',        'reveal'],
+    ['.case-result-title', 'reveal-scale'],
+  ];
+
+  selectors.forEach(([sel, cls]) => {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      if (!el.classList.contains('reveal') &&
+          !el.classList.contains('reveal-left') &&
+          !el.classList.contains('reveal-right') &&
+          !el.classList.contains('reveal-scale')) {
+        el.classList.add(cls === 'stagger-child' ? 'reveal' : cls);
+        if (cls === 'stagger-child') {
+          el.style.transitionDelay = (i % 6) * 0.08 + 's';
+        }
+      }
+    });
+  });
+
+  // Re-initialize observer for newly added classes
+  const allReveal = document.querySelectorAll(
+    '.reveal:not(.visible), .reveal-left:not(.visible), .reveal-right:not(.visible), .reveal-scale:not(.visible)'
+  );
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  allReveal.forEach(el => obs.observe(el));
+})();
+
+// 8. Scroll progress bar
+(function initProgressBar() {
+  const bar = document.createElement('div');
+  bar.style.cssText = `
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background: linear-gradient(90deg, #e8327a, #ff8000);
+    z-index:9999; transition: width 0.1s linear;
+    border-radius:0 2px 2px 0;
+  `;
+  document.body.appendChild(bar);
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+})();
+
+// 9. Add scroll indicator to hero
+(function addScrollIndicator() {
+  const hero = document.getElementById('hero');
+  const div = document.createElement('div');
+  div.className = 'scroll-indicator';
+  div.innerHTML = '<div class="scroll-dot"></div><div class="scroll-dot"></div><div class="scroll-dot"></div>';
+  hero.querySelector('.container').appendChild(div);
+})();
+
+// 10. Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
